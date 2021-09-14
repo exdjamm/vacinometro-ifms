@@ -1,6 +1,7 @@
 import logo from '../logo.svg';
 import './Home.css';
 
+/*
 import firebaseConfig from "../FirebaseConfig.json";
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -8,6 +9,7 @@ import { initializeApp } from "firebase/app";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+*/
 
 function Home() {
   return (
