@@ -1,13 +1,13 @@
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './Home.css';
 
 import firebaseConfig from "../FirebaseConfig.json";
-import { initializeHome } from "firebase/app";
+import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Initialize Firebase
-const app = initializeHome(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 function Home() {
   return (
