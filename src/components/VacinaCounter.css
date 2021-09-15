@@ -1,0 +1,27 @@
+.vacinac-conteiner{
+	position: relative;
+	
+	width: 200px;
+	min-height: 50px;
+
+	border-radius: 5px;
+	/*background: gray;*/
+	color: #3474b9;
+}
+
+.vacinac-conteiner .vacinac-1{
+	position: absolute;
+	font-size: 1.8rem;
+	/*left: 2.6rem;*/
+	padding: 0.5rem;
+}
+
+.vacinac-conteiner .vacinac-2{
+	position: absolute;
+	font-size: 0.7rem;
+
+	right: 0;	
+	bottom: 0;
+
+	padding: 0.3rem;
+}
