@@ -1,3 +1,14 @@
+:root {
+  --dark-green: #0C8526;
+  --green: #0BA32D;
+  --red: #EC0909;
+  --white: #F7F7F7;
+  --popup-white: #F1F1F1;
+  --gradient-start: #FFF;
+  --gradient-center: #e5f0e6;
+  --gradient-end: #e5e6e4;
+}
+
 * {
   margin: 0;
   padding: 0;
