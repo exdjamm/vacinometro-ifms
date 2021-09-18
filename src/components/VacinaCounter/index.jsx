@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./VacinaCounter.css";
+import "./index.css";
 
 import firebaseConfig from "../FirebaseConfig.json";
 import { initializeApp } from "firebase/app";
