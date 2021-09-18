@@ -1,4 +1,4 @@
-import "UpdateVacina.css";
+import "./UpdateVacina.css";
 
 function UpdateVacina() {
   return (
