@@ -13,6 +13,15 @@
 
 Vacinômetro em website open-source para observar o progresso de vacinação dos estudantes do IFMS, construído em React integrado com o Firebase do Google Cloud.
 
+<div align="center">
+	<a href="https://github.com/exodojaffar/vacinometro-ifms">
+		<img width="48%" src="https://github.com/exodojaffar/vacinometro-ifms/blob/main/prototypes/home-logado.jpg">
+	</a>
+	<a href="https://github.com/exodojaffar/vacinometro-ifms">
+		<img width="48%" src="https://github.com/exodojaffar/vacinometro-ifms/blob/main/prototypes/perfil.jpg">
+	</a>
+</div>
+
 ## ⚙️ Desenvolvido com
 <div>
     <a href="https://reactjs.org/">
@@ -46,7 +55,7 @@ npm start
 Licenciado sob a GPL3. Veja <a href="https://github.com/exodojaffar/vacinometro-ifms/blob/main/LICENSE">`LICENSE`</a> para mais informações.
 
 ## 👨‍💻 Autores
-Developed by <a href="https://github.com/exodojaffar">Êxodo Jaffar</a> and <a href="https://github.com/henriqueclaranhan">Henrique Claranhan</a>.
+Desenvolvido por <a href="https://github.com/exodojaffar">Êxodo Jaffar</a> e <a href="https://github.com/henriqueclaranhan">Henrique Claranhan</a>.
 
 
 <!-- BADGES -->
