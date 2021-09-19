@@ -2,7 +2,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 
 import "./index.css";
 
-function RenameThis({color}){
+function HeaderButton({color}){
 	const isColorWhite = color == "white";
 
 	const styleGreen = {
@@ -26,4 +26,4 @@ function RenameThis({color}){
 	);
 }
 
-export default RenameThis;
+export default HeaderButton;
