@@ -4,7 +4,7 @@ import HeaderButton from './HeaderButtons'
 
 import "./index.css";
 
-function RenameThis(props){
+function Header(props){
 
 	return (
 		<header id="page-header">
@@ -20,4 +20,4 @@ function RenameThis(props){
 	);
 }
 
-export default RenameThis;
+export default Header;
