@@ -1,0 +1,19 @@
+.header-btns{	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 4.6rem;
+	width: 300px;
+
+	cursor: pointer;
+}
+
+.header-btn-content{
+	font-size: 3rem;
+	padding: 0 0.6rem;
+}
+
+.btn-icon{
+	font-size: 4rem;
+}
