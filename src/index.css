@@ -34,3 +34,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ubuntu-font{
+  font-family: "Ubuntu";
+}
+
+.poppins-font{
+  font-family: 'Poppins';
+}
