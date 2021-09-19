@@ -2,7 +2,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 
 import "./index.css";
 
-function HeaderButton({color}){
+function HeaderButton({color='green', text='Acessar Conta'}){
 	const isColorWhite = color == "white";
 
 	const styleGreen = {
@@ -19,7 +19,7 @@ function HeaderButton({color}){
 
 	return (
 		<div className="header-btns" style={style}>
-			<span className="header-btn-content ubuntu-font">Acessar Conta</span>
+			<span className="header-btn-content ubuntu-font">{text}</span>
 			<i hidden={isColorWhite} className="bi bi-box-arrow-in-right btn-icon"></i>
 
 		</div>
