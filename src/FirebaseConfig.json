@@ -1,8 +1,8 @@
 {
-  "apiKey": "AIzaSyAetbsbMjoIKNKOC_8nzVwRujnz0j0p0Jk",
-  "authDomain": "vacinometro-ifms.firebaseapp.com",
-  "projectId": "vacinometro-ifms",
-  "storageBucket": "vacinometro-ifms.appspot.com",
-  "messagingSenderId": "674985332115",
-  "appId": "1:674985332115:web:48b6097bc545c0749dec66"
+	"apiKey": "AIzaSyAetbsbMjoIKNKOC_8nzVwRujnz0j0p0Jk",
+	"authDomain": "vacinometro-ifms.firebaseapp.com",
+	"projectId": "vacinometro-ifms",
+	"storageBucket": "vacinometro-ifms.appspot.com",
+	"messagingSenderId": "674985332115",
+	"appId": "1:674985332115:web:48b6097bc545c0749dec66"
 }

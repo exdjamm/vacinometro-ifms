@@ -1,46 +1,45 @@
 :root {
-  --dark-green: #0C8526;
-  --green: #0BA32D;
-  --red: #EC0909;
-  --white: #F7F7F7;
-  --popup-white: #F1F1F1;
-  --gradient-start: #FFF;
-  --gradient-center: #e5f0e6;
-  --gradient-end: #e5e6e4;
+  	--dark-green: #0C8526;
+  	--green: #0BA32D;
+  	--red: #EC0909;
+  	--white: #F7F7F7;
+  	--popup-white: #F1F1F1;
+  	--gradient-start: #FFF;
+  	--gradient-center: #e5f0e6;
+  	--gradient-end: #e5e6e4;
 
-  font-size: 60%
+  	font-size: 60%
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 button {
-  all: unset;
+	all: unset;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-  height: 100vh;
-  width: 100%;
+	width: 100%;
+	height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.ubuntu-font{
-  font-family: "Ubuntu", sans-serif;
+.ubuntu-font {
+	font-family: "Ubuntu", sans-serif;
 }
 
-.poppins-font{
-  font-family: 'Poppins', sans-serif;
+.poppins-font {
+	font-family: 'Poppins', sans-serif;
 }

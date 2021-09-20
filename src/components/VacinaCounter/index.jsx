@@ -18,26 +18,26 @@ const docRefVacinasSomas = doc(db, "soma_vacina/soma");;
 //   return { ...docSnapshot.data()};
 // }
 
-function VacinaCounter({width, height}){
+function VacinaCounter({ width, height }) {
 	const style = {
 		height: height + "em",
 		width: width + "em"
 	}
 
-	const [somaVacinados, setSomaVacinados] = useState({soma_1: 0, soma_2: 0});
-	
+	const [somaVacinados, setSomaVacinados] = useState({ soma_1: 0, soma_2: 0 });
+
 	onSnapshot(docRefVacinasSomas, (snapshot) => {
-		const data = { ...snapshot.data()}
+		const data = { ...snapshot.data() }
 		setSomaVacinados(data);
-	},  (error) => { throw error;})
+	}, (error) => { throw error; })
 
 	return (
 		<article style={style} className="vacinac-conteiner">
-			
-			<span className="vacinac-1">{somaVacinados.soma_1}</span>	
-			<span className="vacinac-2">Segunda dose: {somaVacinados.soma_2}</span>	
-	
-			
+
+			<span className="vacinac-1">{somaVacinados.soma_1}</span>
+			<span className="vacinac-2">Segunda dose: {somaVacinados.soma_2}</span>
+
+
 		</article>
 	);
 }

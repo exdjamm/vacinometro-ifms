@@ -1,21 +1,17 @@
 import HeaderTitle from './HeaderTitle'
 import HeaderButton from './HeaderButtons'
 
-
 import "./index.css";
 
-function Header(props){
-
+function Header(props) {
 	return (
 		<header id="page-header">
-			<HeaderTitle/>
+			<HeaderTitle />
 
 			<div className="hbuttons">
-				<HeaderButton className="hlogin-btn" color="white" text="Login"/>
-				<HeaderButton className="haccess-btn" color="green" text="Acessar Conta"/>
+				<HeaderButton className="hlogin-btn" color="white" text="Login" />
+				<HeaderButton className="haccess-btn" color="green" text="Acessar Conta" />
 			</div>
-				
-			
 		</header>
 	);
 }

@@ -4,7 +4,7 @@ import "./index.css";
 import firebaseConfig from "../FirebaseConfig.json";
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
-import {getAuth, signInWithPopup, GoogleAuthProvider} from 'firebase/auth';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -14,17 +14,15 @@ const provider = new GoogleAuthProvider()
 const docRefVacinasSomas = doc(db, "soma_vacina/soma");
 
 const atualizarSoma = async () => {
-	const {uid} = auth.currentUser
+	const { uid } = auth.currentUser
 
 	const somaVacinasSnapshot = await getDoc(docRefVacinasSomas)
 
-	const {soma_1} =  somaVacinasSnapshot.data()
-	updateDoc(docRefVacinasSomas, {"soma_1": (soma_1+1)})	
+	const { soma_1 } = somaVacinasSnapshot.data()
+	updateDoc(docRefVacinasSomas, { "soma_1": (soma_1 + 1) })
 
 	const docRef = doc(db, `vacinados/${uid}`)
-	await setDoc(docRef, {numero_doses: 1})
-
-	
+	await setDoc(docRef, { numero_doses: 1 })
 }
 
 const signIn = async () => {
@@ -32,12 +30,11 @@ const signIn = async () => {
 	atualizarSoma()
 }
 
-function LoginAuthGoogle(){
-
+function LoginAuthGoogle() {
 	return (
 		<article className="loging-conteiner" onClick={signIn}>
-			<span className="icon-google"></span>		
-			<span className="loging-btn">Faça cadastro com o Google</span>		
+			<span className="icon-google"></span>
+			<span className="loging-btn">Faça cadastro com o Google</span>
 		</article>
 	);
 }

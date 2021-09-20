@@ -1,6 +1,6 @@
 import "./index.css";
 
-function RenameThis({doseValue=0, doseTitle='1ª Dose', doseSubTitle=''}){
+function RenameThis({ doseValue = 0, doseTitle = '1ª Dose', doseSubTitle = '' }) {
 	const hasSubTitle = doseSubTitle == '';
 
 	return (
@@ -12,7 +12,7 @@ function RenameThis({doseValue=0, doseTitle='1ª Dose', doseSubTitle=''}){
 			<div className="dose-number">
 				<span className="poppins-font">{doseValue}</span>
 			</div>
-		</article>	
+		</article>
 	);
 }
 

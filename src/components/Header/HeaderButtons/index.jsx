@@ -1,8 +1,7 @@
 import "bootstrap-icons/font/bootstrap-icons.css"
-
 import "./index.css";
 
-function HeaderButton({color='green', text='Acessar Conta', className=''}){
+function HeaderButton({ color = 'green', text = 'Acessar Conta', className = '' }) {
 	const isColorWhite = color == "white";
 
 	const styleGreen = {
@@ -15,7 +14,7 @@ function HeaderButton({color='green', text='Acessar Conta', className=''}){
 		backgroundColor: "var(--white)"
 	}
 
-	const style = (isColorWhite)? styleWhite : styleGreen;
+	const style = (isColorWhite) ? styleWhite : styleGreen;
 
 	return (
 		<div className={`${className} header-btns`} style={style}>
