@@ -1,0 +1,39 @@
+.vacina-dcounter{
+	display: flex;
+	flex-direction: column;
+
+	width: 224px;
+	height: 192px;
+
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+}
+
+.vacina-dcounter .dose-title{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+	padding-top: 7px;
+	padding-bottom: 7px ;
+
+	border-radius: 5px 5px 0 0;
+
+	color:  var(--white);
+	background-color: var(--green);
+}
+
+.vacina-dcounter .dose-title .d-maintitle{
+	font-size: 32px;
+}
+
+.vacina-dcounter .dose-title .d-subtitle{
+	font-size: 18px;
+}
+
+.vacina-dcounter .dose-number {
+	text-align: center;
+	font-size: 96px;
+	color:  var(--green);
+}
