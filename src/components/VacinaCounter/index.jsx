@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./index.css";
 
-import firebaseConfig from "../FirebaseConfig.json";
+import firebaseConfig from "./../../FirebaseConfig.json";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, getDoc, onSnapshot } from 'firebase/firestore';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
+// // Follow this pattern to import other Firebase services
+// // import { } from 'firebase/<service>';
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -18,13 +18,11 @@ const docRefVacinasSomas = doc(db, "soma_vacina/soma");;
 //   return { ...docSnapshot.data()};
 // }
 
-function VacinaCounter({ width, height }) {
-	const style = {
-		height: height + "em",
-		width: width + "em"
-	}
+import VacinaCounterHeader from './VacinaCounterHeader';
+import VacinaDoseCounter from './VacinaDoseCounter';
 
-	const [somaVacinados, setSomaVacinados] = useState({ soma_1: 0, soma_2: 0 });
+function VacinaCounter() {
+	const [somaVacinados, setSomaVacinados] = useState({ soma_1: 0, soma_2: 0, soma_3:0 });
 
 	onSnapshot(docRefVacinasSomas, (snapshot) => {
 		const data = { ...snapshot.data() }
@@ -32,13 +30,12 @@ function VacinaCounter({ width, height }) {
 	}, (error) => { throw error; })
 
 	return (
-		<article style={style} className="vacinac-conteiner">
-
-			<span className="vacinac-1">{somaVacinados.soma_1}</span>
-			<span className="vacinac-2">Segunda dose: {somaVacinados.soma_2}</span>
-
-
-		</article>
+		<section id="vacina-counter">
+			<VacinaCounterHeader />
+			<VacinaDoseCounter doseValue={somaVacinados.soma_1} doseTitle="1ª Dose" />
+			<VacinaDoseCounter doseValue={somaVacinados.soma_2} doseTitle="2ª Dose" doseSubTitle="ou dose unica"/>
+			<VacinaDoseCounter doseValue={somaVacinados.soma_3} doseTitle="3ª Dose" />
+		</section>
 	);
 }
 
