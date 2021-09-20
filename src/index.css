@@ -38,9 +38,9 @@ code {
 }
 
 .ubuntu-font{
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
 }
 
 .poppins-font{
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
