@@ -1,0 +1,13 @@
+#vacina-counter-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#vacina-counter-header h1 {
+    width: 72%;
+    color: var(--green);
+    font-weight: 500;
+}

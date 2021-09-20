@@ -1,10 +1,11 @@
 import "./index.css";
 
-function RenameThis(props){
-
+function VacinaCounterHeader(props){
 	return (
-		<></>	
+		<header id="vacina-counter-header">
+			<h1 className="ubuntu-font">Estudantes vacinados</h1>
+		</header>	
 	);
 }
 
-export default RenameThis;
+export default VacinaCounterHeader;
