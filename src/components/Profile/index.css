@@ -5,6 +5,8 @@
 }
 
 #profile-container .pselects-dose-stts{
+	display: grid;
+	place-items: center;
 	margin-top: 46.2px;
 	margin-bottom: 22.2px;
 	width: calc(100% - 10%);

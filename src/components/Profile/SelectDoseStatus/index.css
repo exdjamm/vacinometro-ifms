@@ -45,4 +45,10 @@
 	padding-left: clamp(0.6rem, 7%, 43.2px);
 
 	color: var(--green);
-}	
+}
+
+@media (min-width: 663px) {
+	.select-dose-status {
+		max-width: 594px;
+	}
+}
