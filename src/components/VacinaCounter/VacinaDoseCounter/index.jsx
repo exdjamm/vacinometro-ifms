@@ -1,6 +1,6 @@
 import "./index.css";
 
-function RenameThis({ doseValue = 0, doseTitle = '1ª Dose', doseSubTitle = '' }) {
+function VacinaDoseCounter({ doseValue = 0, doseTitle = '1ª Dose', doseSubTitle = '' }) {
 	const hasSubTitle = doseSubTitle == '';
 
 	return (
@@ -16,4 +16,4 @@ function RenameThis({ doseValue = 0, doseTitle = '1ª Dose', doseSubTitle = '' }
 	);
 }
 
-export default RenameThis;
+export default VacinaDoseCounter;
