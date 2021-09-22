@@ -1,0 +1,15 @@
+#profile-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#profile-container .pselects-dose-stts{
+	margin-top: 46.2px;
+	margin-bottom: 22.2px;
+	width: calc(100% - 10%);
+}
+
+#profile-container .pselects-dose-stts .select-dose-status{
+	margin-bottom: 26.4px ;
+}
