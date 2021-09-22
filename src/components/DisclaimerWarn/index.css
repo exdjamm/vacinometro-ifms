@@ -1,0 +1,21 @@
+.disclaimer-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	color: var(--red);
+}
+
+.disclaimer-container span{
+	font-size: 13.2px;
+	font-weight: 500;
+	line-height: 20px;
+
+	width: 205px;
+
+	margin-left: 12px;
+}
+
+.disclaimer-container i{
+	font-size: 36px;
+}
