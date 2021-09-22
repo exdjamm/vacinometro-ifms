@@ -11,3 +11,19 @@
     color: var(--green);
     font-weight: 500;
 }
+
+@media (min-width: 769px) {
+    #vacina-counter-header {
+        height: 70px;
+        align-items: center;
+
+        border-radius: 8px 8px 0 0;
+        background-color: var(--green);
+    }
+    
+    #vacina-counter-header h1 {
+        width: 100%;
+        color: #FFF;
+        font-weight: 400;
+    }
+}

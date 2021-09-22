@@ -42,3 +42,31 @@
 	border-radius: 0 0 5px 5px;
 	background-color: #F7F7F7;
 }
+
+@media (min-width: 769px) {
+	.vacina-dcounter {
+		box-shadow: none;
+		flex-direction: column-reverse;
+	}
+
+	.vacina-dcounter .dose-title {
+		color: var(--green);
+		background-color: var(--white);
+		height: 79px;
+	}
+
+	.vacina-dcounter .dose-number {
+		max-height: 150px;
+		font-size: 105px;
+	}
+
+	.vacina-dcounter .dose-title .d-maintitle{
+		font-size: 40px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.vacina-dcounter .dose-number {
+		font-size: 112px;
+	}
+}

@@ -32,7 +32,7 @@ function VacinaCounter() {
 	return (
 		<section id="vacina-counter">
 			<VacinaCounterHeader />
-			<div className="dose-counter-container">
+			<div id="dose-counter-container">
 				<VacinaDoseCounter doseValue={somaVacinados.soma_1} doseTitle="1ª Dose" />
 				<VacinaDoseCounter doseValue={somaVacinados.soma_2} doseTitle="2ª Dose" doseSubTitle="ou dose única"/>
 				<VacinaDoseCounter doseValue={somaVacinados.soma_3} doseTitle="3ª Dose" />
