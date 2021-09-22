@@ -1,5 +1,4 @@
 #vacina-counter{
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -11,4 +10,11 @@
 
 #vacina-counter #vacina-counter-header{
 	padding: 2rem ;
+}
+
+.dose-counter-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
