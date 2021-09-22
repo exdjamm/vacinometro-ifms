@@ -3,15 +3,16 @@
 	flex-direction: column;
 	align-items: center;
 
+	width: 100%;
+	padding: 0 60px;
+
 	font-weight: 500;
 }
 
 .hhint-text{
 	font-size: 1.6rem ;
 	color: var(--green);
-	line-height: 2.2rem;
-
-	width: 20.8rem;
+	line-height: 2.2rem;	
 
 	margin-bottom: 2.9rem;
 }
