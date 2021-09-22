@@ -11,9 +11,11 @@
 }
 
 .disclaimer-container span{
-	font-size: 13.2px;
+	font-size: 13.5px;
 	font-weight: 500;
 	line-height: 20px;
+
+	padding-right: 10px;
 
 	margin-left: 12px;
 }
