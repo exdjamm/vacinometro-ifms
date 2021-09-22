@@ -10,7 +10,8 @@ function Header(props) {
 
 			<div className="hbuttons">
 				<HeaderButton className="hlogin-btn" color="white" text="Login" />
-				<HeaderButton className="haccess-btn" color="green" text="Acessar Conta" />
+				<HeaderButton className="haccess-btn" color="green" text="Cadastro" />
+				<HeaderButton className="haccess-btn-mobile" color="green" text="Acessar Conta" />
 			</div>
 		</header>
 	);

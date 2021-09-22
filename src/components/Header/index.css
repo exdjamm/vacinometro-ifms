@@ -8,6 +8,6 @@
 	padding: 2.6rem 0;
 }
 
-#page-header .hlogin-btn{
+#page-header .hlogin-btn, #page-header .haccess-btn{
 	display:  none;
 }
