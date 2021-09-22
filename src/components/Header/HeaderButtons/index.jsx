@@ -1,4 +1,3 @@
-import "bootstrap-icons/font/bootstrap-icons.css"
 import "./index.css";
 
 function HeaderButton({ color = 'green', text = 'Acessar Conta', className = '' }) {
