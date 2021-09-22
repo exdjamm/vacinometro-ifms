@@ -1,0 +1,39 @@
+.home-hint-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-weight: 500;
+}
+
+.hhint-text{
+	font-size: 1.6rem ;
+	color: var(--green);
+	line-height: 2.2rem;
+
+	width: 20.8rem;
+
+	margin-bottom: 2.9rem;
+}
+
+.hhint-button{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	
+	color: var(--dark-green);
+	border: 3px solid var(--dark-green);
+	width: 20.4rem;	
+	cursor: pointer;
+}
+
+.hhint-button span{
+	padding-left: 1.5rem;
+	font-size: 1.7rem;
+	line-height: 1.6rem;
+}
+
+.hhint-button i {
+	padding-right: 1.5rem;
+	font-size: 3.2rem;
+}
