@@ -3,15 +3,17 @@
 	flex-direction: row;
 	justify-content: center;
 
+	width: 100%;
+
+	padding: 0 30px;
 	color: var(--red);
+
 }
 
 .disclaimer-container span{
 	font-size: 13.2px;
 	font-weight: 500;
 	line-height: 20px;
-
-	width: 205px;
 
 	margin-left: 12px;
 }
