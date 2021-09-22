@@ -23,8 +23,10 @@
 	align-items: center;
 	
 	color: var(--dark-green);
+	border-radius: 3px;
 	border: 3px solid var(--dark-green);
-	width: 20.4rem;	
+	width: 20.4rem;
+	height: 46px;
 	cursor: pointer;
 }
 
@@ -35,6 +37,7 @@
 }
 
 .hhint-button i {
+	margin-top: 4px;
 	padding-right: 1.5rem;
 	font-size: 3.2rem;
 }
