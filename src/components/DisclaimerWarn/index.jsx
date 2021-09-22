@@ -1,6 +1,6 @@
 import "./index.css";
 
-function RenameThis(props) {
+function DisclaimerWarn(props) {
 	return (
 		<article className="disclaimer-container">
 			<i className='bi bi-exclamation-circle'></i>
@@ -11,4 +11,4 @@ function RenameThis(props) {
 	);
 }
 
-export default RenameThis;
+export default DisclaimerWarn;
