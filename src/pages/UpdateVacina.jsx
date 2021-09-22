@@ -1,22 +1,15 @@
 import "./UpdateVacina.css";
 
+import Header from '../components/Header';
+import Profile from '../components/Profile';
+import CopyrightFooter from '../components/CopyrightFooter';
+
 function UpdateVacina() {
 	return (
-		<div className="UpdateVacina">
-			<header className="UpdateVacina-header">
-				<img src={logo} className="UpdateVacina-logo" alt="logo" />
-				<p>
-					Edit <code>src/UpdateVacina.js</code> and save to reload.
-				</p>
-				<a
-					className="UpdateVacina-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+		<div id="update-vacina-page">
+			<Header />
+			<Profile />
+			<CopyrightFooter />
 		</div>
 	);
 }
