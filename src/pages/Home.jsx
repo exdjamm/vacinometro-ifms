@@ -11,23 +11,20 @@ import { initializeApp } from "firebase/app";
 const app = initializeApp(firebaseConfig);
 */
 
+import Header from '../components/Header';
+import VacinaCounter from '../components/VacinaCounter';
+import HomeHint from '../components/HomeHint';
+import DisclaimerWarn from '../components/DisclaimerWarn';
+import CopyrightFooter from '../components/CopyrightFooter';
+
 function Home() {
 	return (
-		<div className="Home">
-			<header className="Home-header">
-				<img src={logo} className="Home-logo" alt="logo" />
-				<p>
-					Edit <code>src/Home.js</code> and save to reload.
-				</p>
-				<a
-					className="Home-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+		<div id="home-page">
+			<Header />
+			<VacinaCounter />
+			<HomeHint />
+			<DisclaimerWarn />
+			<CopyrightFooter />
 		</div>
 	);
 }
