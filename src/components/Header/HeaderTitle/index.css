@@ -1,14 +1,15 @@
-.header-title{
+.header-title {
 	display: flex;
 	align-items: center;
 
-	height: 6rem;
-	width: 100%;
+	user-select: none;
+	cursor: pointer;
 
+	height: 6rem;
 	background-color: var(--dark-green);
 }
 
-.site-icon, .site-name{
+.site-icon, .site-name {
 	color: var(--white);
 }
 
@@ -20,4 +21,28 @@
 
 .site-name {
 	font-size: 2.3rem;
+}
+
+@media (min-width: 769px) {
+	.header-title {
+		width: fit-content;
+		height: fit-content;
+
+		float: left;
+		padding-right: 2rem;
+
+		background-color: transparent;
+	}
+	.site-icon, .site-name {
+		color: var(--dark-green);
+	}
+	.site-icon{
+		padding-left: 0;
+		padding-right: 0.8rem;
+		font-size: 3.2rem;
+	}
+	.site-name {
+		font-size: 3rem;
+		font-weight: 500;
+	}
 }

@@ -1,4 +1,4 @@
-.header-btns{	
+.header-btns {	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -18,4 +18,23 @@
 .btn-icon{
 	margin-top: 3px;
 	font-size: 2.4rem;
+}
+
+@media (min-width: 769px) {
+	.header-btns {
+		width: 14.8rem;
+	}
+	
+	.hlogin-btn {
+		width: fit-content;
+		padding: 0 1rem;
+	}
+
+	#page-header .haccess-btn-mobile {
+		display: none;
+	}
+
+	.btn-icon{
+		margin-top: 0;
+	}
 }

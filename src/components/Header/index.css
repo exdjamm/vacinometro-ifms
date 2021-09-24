@@ -1,13 +1,44 @@
-#page-header{/*futuro*/}
+:root {
+	--header-padding-vertical: 4.5rem;
+}
 
-#page-header .hbuttons{
+#page-header .hbuttons {
 	display: flex;
 	justify-content: center;
-	/*align-items: center;*/
 
 	padding: 2.6rem 0;
 }
 
 #page-header .hlogin-btn, #page-header .haccess-btn{
 	display:  none;
+}
+
+@media (min-width: 769px) {
+	#page-header {
+		padding: var(--header-padding-vertical) 7rem;
+		margin-bottom: 1rem;
+		flex-direction: row;
+	}
+	.hbuttons {
+		float: right;
+		margin-top: 3px;
+		padding: 0 !important;
+		column-gap: 8px;
+	}
+
+	#page-header .hlogin-btn, #page-header .haccess-btn{
+		display:  flex;
+	}
+}
+
+@media (min-width: 1025px) {
+	#page-header {
+		padding: var(--header-padding-vertical) 8.5rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	#page-header {
+		padding: var(--header-padding-vertical) 10%;
+	}
 }
