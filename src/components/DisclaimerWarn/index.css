@@ -1,4 +1,4 @@
-.disclaimer-container{
+.disclaimer-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -22,4 +22,19 @@
 
 .disclaimer-container i{
 	font-size: 36px;
+}
+
+@media (min-width: 769px) {
+	.disclaimer-container {
+		align-self: center;
+		align-items: center;
+		max-width: 700px;
+		padding: 0 0;
+	}
+}
+
+@media (min-width: 990px) {
+	.disclaimer-container {
+		max-width: 900px;
+	}
 }
