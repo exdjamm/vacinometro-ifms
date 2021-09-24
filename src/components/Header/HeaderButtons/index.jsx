@@ -16,10 +16,10 @@ function HeaderButton({ color = 'green', text = 'Acessar Conta', className = '' 
 	const style = (isColorWhite) ? styleWhite : styleGreen;
 
 	return (
-		<div className={`${className} header-btns`} style={style}>
+		<button className={`${className} header-btns`} style={style}>
 			<span className="header-btn-content ubuntu-font">{text}</span>
 			<i hidden={isColorWhite} className="bi bi-box-arrow-in-right btn-icon"></i>
-		</div>
+		</button>
 	);
 }
 
