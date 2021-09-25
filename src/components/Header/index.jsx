@@ -1,17 +1,53 @@
+import { useContext } from 'react';
+
 import HeaderTitle from './HeaderTitle'
 import HeaderButton from './HeaderButtons'
 
+import PageContext from '../../contexts/PageContext';
+import FirebaseContext from '../../contexts/FirebaseContext';
+
 import "./index.css";
 
-function Header(props) {
+function Header({handleGreenButtonBehavior}) {
+	const {textHeader} = useContext(PageContext)
+	const {user, auth} = useContext(FirebaseContext)
+
+	const logged = user != undefined;
+
+	let textLogin = (logged) ? "Sair" : "Login" ;
+	let textCadastro = (logged) ? textHeader.mainButtonLogOn : textHeader.mainButtonLogOff ;
+	let textAccessProfile = textHeader.mobileButton
+
+	const handleClickLoginBtn = (e) =>{
+		if(logged){
+			// TODO: Deslogar usuario; auth.logout()
+		}else{
+			// TODO: mostrar popup de login; setLoginPopupShow(true)
+		}
+	}
+
 	return (
 		<header id="page-header">
 			<HeaderTitle />
 
 			<div className="hbuttons">
-				<HeaderButton className="hlogin-btn" color="white" text="Login" />
-				<HeaderButton className="haccess-btn" color="green" text="Cadastro" />
-				<HeaderButton className="haccess-btn-mobile" color="green" text="Acessar Conta" />
+				<HeaderButton 
+					onClick={handleClickLoginBtn} 
+					className="hlogin-btn" 
+					color="white" 
+					text={textLogin} />
+
+				<HeaderButton 
+					onClick={handleGreenButtonBehavior} 
+					className="haccess-btn" 
+					color="green" 
+					text={textCadastro} />
+
+				<HeaderButton 
+					onClick={handleGreenButtonBehavior} 
+					className="haccess-btn-mobile" 
+					color="green" 
+					text={textAccessProfile} />
 			</div>
 		</header>
 	);
