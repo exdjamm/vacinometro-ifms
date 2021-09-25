@@ -1,28 +1,19 @@
-import { useState } from "react";
-import "./index.css";
-
-import firebaseConfig from "./../../FirebaseConfig.json";
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, doc, getDoc, onSnapshot } from 'firebase/firestore';
-// // Follow this pattern to import other Firebase services
-// // import { } from 'firebase/<service>';
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-const docRefVacinasSomas = doc(db, "soma_vacina/soma");;
-
-// async function getVacinasContas() {
-//   const docRef = doc(db, DOC_VACINA_SOMAS);
-//   const docSnapshot = await getDoc(citiesCol);
-//   return { ...docSnapshot.data()};
-// }
+import { useState, useContext } from "react";
 
 import VacinaCounterHeader from './VacinaCounterHeader';
 import VacinaDoseCounter from './VacinaDoseCounter';
 
+import FirebaseContext from '../../contexts/FirebaseContext'
+
+import { doc, onSnapshot } from 'firebase/firestore';
+
+import "./index.css";
+
 function VacinaCounter() {
 	const [somaVacinados, setSomaVacinados] = useState({ soma_1: 0, soma_2: 0, soma_3:0 });
+	const { db } = useContext(FirebaseContext);
+	
+	const docRefVacinasSomas = doc(db, "soma_vacina/soma");
 
 	onSnapshot(docRefVacinasSomas, (snapshot) => {
 		const data = { ...snapshot.data() }
