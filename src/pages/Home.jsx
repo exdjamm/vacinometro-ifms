@@ -13,7 +13,7 @@ import './Home.css';
 
 const pageContext = {
 	iconsHeader:{
-		logged: "person-circle",
+		logged: "person-cicle",
 		notLogged: "box-arrow-in-right"
 	},
 	textHeader:{
@@ -24,13 +24,24 @@ const pageContext = {
 }
 
 function Home() {
+	const [loginPopupShow, setLoginPopupShow] = useState(false)
+	const [redirect, setRedirect] = useState(false)
+
+	const handleAccessProfile = (e) => {
+		// TODO: Funcionalidade quando clicado no botão de Verde no Header e no botão do Hin
+	}
+
+	if (redirect) {
+		// TODO: Redirecionar para Profile
+	}
 
 	return (
 		<PageContext.Provider value={pageContext}>
+			{/*TODO: Popup de login e sua mudança de estado*/}
 			<div id="home-page">
-				<Header />
+				<Header handleGreenButtonBehavior={handleAccessProfile} />
 				<VacinaCounter />
-				<HomeHint />
+				<HomeHint handleAccessProfile={handleAccessProfile} />
 				<DisclaimerWarn />
 				<CopyrightFooter />
 			</div>
