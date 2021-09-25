@@ -21,11 +21,21 @@ const pageContext = {
 }
 
 function UpdateVacina() {
+	const [redirect, setRedirect] = useState(false)
+
+	const handleAccessHome = (e) => {
+		// TODO: Funcionalidade de quando clicar no Botão verde no Header
+		// Lembrando que o user não poderá entrar nessa pagina deslogado
+	}
+
+	if (redirect) {
+		// Redirecionar para Home
+	}
 
 	return (
 		<PageContext.Provider value={pageContext}>
 			<div id="update-vacina-page">
-				<Header />
+				<Header handleGreenButtonBehavior={handleAccessHome} />
 				<Profile />
 				<CopyrightFooter />
 			</div>
