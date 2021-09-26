@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useEffect} from 'react';
 import { Redirect } from "react-router-dom";
 
 import Header from '../components/Header';
@@ -24,8 +24,34 @@ const pageContext = {
 	}
 }
 
-function Home() {
-	const [loginPopupShow, setLoginPopupShow] = useState(false)
+const cleanSearchLocation = ({ search }) => {
+	if(search == ''){
+		return search
+	}
+
+	const searchPure = search.replace('?', '')
+	let params = searchPure.split('&')
+    
+    let paramsObject = { }
+    
+	params.forEach( (index) => {
+		const [ name, value ]= index.split('=')
+
+		paramsObject = { ... paramsObject, [name]: value }
+	})
+    
+    return paramsObject
+}
+
+function Home({ location }) {
+	
+	const [loginParam, setLoginParam] = useState(false)
+	useEffect( () => {
+		const { login } = cleanSearchLocation(location)
+		setLoginParam(login == 1)
+	})
+
+	const [loginPopupShow, setLoginPopupShow] = useState(loginParam == 1)
 	const [redirect, setRedirect] = useState(false)
 
 	const handleAccessProfile = (e) => {
