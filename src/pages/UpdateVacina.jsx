@@ -23,12 +23,15 @@ const pageContext = {
 
 function UpdateVacina() {
 	const [redirect, setRedirect] = useState(false)
+	
+	const { user } = useContext(FirebaseContext)
+	const notLogged = user == undefined;
 
 	const handleAccessHome = (e) => {
 		setRedirect(true)
 	}
 
-	if (redirect) {
+	if (redirect || notLogged) {
 		return <Redirect to={'/'}/>
 	}
 
