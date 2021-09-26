@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useContext } from 'react';
 
 import "./UpdateVacina.css";
 
@@ -7,6 +7,7 @@ import Profile from '../components/Profile';
 import CopyrightFooter from '../components/CopyrightFooter';
 
 import PageContext from '../contexts/PageContext';
+import FirebaseContext from '../contexts/FirebaseContext';
 
 const pageContext = {
 	iconsHeader:{
@@ -24,8 +25,7 @@ function UpdateVacina() {
 	const [redirect, setRedirect] = useState(false)
 
 	const handleAccessHome = (e) => {
-		// TODO: Funcionalidade de quando clicar no Botão verde no Header
-		// Lembrando que o user não poderá entrar nessa pagina deslogado
+		setRedirect(true)
 	}
 
 	if (redirect) {
