@@ -29,7 +29,7 @@ function UpdateVacina() {
 	}
 
 	if (redirect) {
-		// Redirecionar para Home
+		return <Redirect to={'/'}/>
 	}
 
 	return (

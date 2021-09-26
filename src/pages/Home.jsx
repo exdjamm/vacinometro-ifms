@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { Redirect } from "react-router-dom";
 
 import Header from '../components/Header';
 import VacinaCounter from '../components/VacinaCounter';
@@ -32,7 +33,7 @@ function Home() {
 	}
 
 	if (redirect) {
-		// TODO: Redirecionar para Profile
+		return <Redirect to={'/vacinas'}/>
 	}
 
 	return (
