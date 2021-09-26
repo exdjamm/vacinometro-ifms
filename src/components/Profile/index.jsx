@@ -1,14 +1,19 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+
+import FirebaseContext from '../../contexts/FirebaseContext';
 
 import ProfileTitle from './ProfileTitle';
 import ProfileHint from './ProfileHint';
 import SelectDoseStatus from './SelectDoseStatus';
 import SaveStatusButton from './SaveStatusButton';
 
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+
 import "./index.css";
 
 function Profile(props) {
 	const [dosesStatus, setDosesStatus] = useState({dose_1:false, dose_2:false, dose_3:false, dose_unica:false})
+	const { auth, db } = useContext(FirebaseContext)
 
 	const handleChangeDosesStatus = ({currentTarget}) => {
 		const name  = currentTarget.getAttribute('name');
@@ -26,7 +31,14 @@ function Profile(props) {
 	}
 
 	const updateDoseOnDb = (e) => {
-		// TODO: implementação do firebase e atualização de doses no banco de dados
+		// Expect user be login
+		const uid = auth.currentUser
+		const docUserVacinas = doc(db, `vacinados/${uid}`)
+
+		// TODO: While not set, show a popup of a spinner running
+		setDoc(docUserVacinas, dosesStatus).then( () => {
+			// TODO: When done, show a check popup	
+		})
 	}
 
 	return (
