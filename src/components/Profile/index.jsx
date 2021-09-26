@@ -25,6 +25,10 @@ function Profile(props) {
 		})
 	}
 
+	const updateDoseOnDb = (e) => {
+		// TODO: implementação do firebase e atualização de doses no banco de dados
+	}
+
 	return (
 		<section id="profile-container">
 			<header>
@@ -55,7 +59,7 @@ function Profile(props) {
 					status={dosesStatus.dose_unica}/>
 			</div>
 
-			<SaveStatusButton />
+			<SaveStatusButton onClick={updateDoseOnDb}/>
 		</section>
 	);
 }
