@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 
 import FirebaseContext from '../../contexts/FirebaseContext';
 
@@ -7,13 +7,22 @@ import ProfileHint from './ProfileHint';
 import SelectDoseStatus from './SelectDoseStatus';
 import SaveStatusButton from './SaveStatusButton';
 
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc} from 'firebase/firestore';
 
 import "./index.css";
 
 function Profile(props) {
+	// Expect user be login
+	const uid = auth.currentUser
+	const docUserVacinas = doc(db, `vacinados/${uid}`)
+
 	const [dosesStatus, setDosesStatus] = useState({dose_1:false, dose_2:false, dose_3:false, dose_unica:false})
 	const { auth, db } = useContext(FirebaseContext)
+
+	useEffect( async () => {
+		const somaVacinasSnapshot = await getDoc(docUserVacinas)
+		setDosesStatus(somaVacinasSnapshot.data())
+	})
 
 	const handleChangeDosesStatus = ({currentTarget}) => {
 		const name  = currentTarget.getAttribute('name');
@@ -31,9 +40,6 @@ function Profile(props) {
 	}
 
 	const updateDoseOnDb = (e) => {
-		// Expect user be login
-		const uid = auth.currentUser
-		const docUserVacinas = doc(db, `vacinados/${uid}`)
 
 		// TODO: While not set, show a popup of a spinner running
 		setDoc(docUserVacinas, dosesStatus).then( () => {
