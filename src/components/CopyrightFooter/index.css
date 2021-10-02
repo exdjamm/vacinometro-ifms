@@ -5,10 +5,3 @@
 	text-align: center;
 	padding: 10px 0 23px;
 }
-
-@media (min-width: 769px) and (min-height: 780px) {
-	#copy-footer{
-		position: absolute;
-		bottom: 20px;
-	}
-}
