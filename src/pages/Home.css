@@ -10,3 +10,9 @@
 #home-page #copy-footer{
 	margin-top: 38px;
 }
+
+@media (min-width: 769px) and (min-height: 780px) {
+	#home-page #vacina-counter{
+		margin-top: 5vh;
+	}
+}
