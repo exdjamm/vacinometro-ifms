@@ -8,10 +8,13 @@ function LoginPopup({state: [state, setState]}) {
 		setState(true)
 	}
 
+	// TODO: Show Warn feature
+
 	return (
-		<article hidden={state}>
+		<article hidden={!state}>
 			<PopupBox 
 				warnText="Erro no Login! Tente novamente"
+				showWarn={false}
 				hintText="Use sua conta instituional para criar ou acessar seu perfil."
 				closeButton={closePopup}
 				button={LoginGoogleButton} 
