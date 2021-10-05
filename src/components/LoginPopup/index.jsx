@@ -5,7 +5,7 @@ import "./index.css";
 
 function LoginPopup({state: [state, setState]}) {
 	const closePopup = () => {
-		setState(true)
+		setState(false)
 	}
 
 	// TODO: Show Warn feature
