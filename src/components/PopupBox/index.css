@@ -1,0 +1,75 @@
+#background-popup {
+	height: 100vh;
+	width: 100vw;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+
+	background: #E5E5E5;
+}
+
+.popup-box {
+	position: relative;
+    width: 438px;
+    height: 347px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+	background: #F1F1F1;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+	border-radius: 5.4px;
+}
+
+.pp-header {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+
+	position: relative;
+
+	height: 126.6px;
+	width: 100%;
+}
+
+.pp-header .pp-main-icon {
+	font-size: 89.5px;
+	color: var(--dark-green);
+}
+
+.pp-btn-close{
+	top:  12px;
+	right: 12px;
+	position: absolute;
+
+	cursor: pointer;
+}
+
+.pp-btn-close i {
+	font-size: 37px;
+	color: var(--red);
+}
+
+.pp-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 0 49px;
+}
+
+.pp-content .pp-text{
+	text-align: center;
+}
+
+.pp-content .pp-button {
+	margin-bottom: 46.2px;
+	margin-top: 23px;
+
+	filter: drop-shadow(0px 0.6px 3.6px rgba(0, 0, 0, 0.25));
+	border-radius: 6.6px;
+}
