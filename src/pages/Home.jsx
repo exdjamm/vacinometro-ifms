@@ -6,6 +6,7 @@ import VacinaCounter from '../components/VacinaCounter';
 import HomeHint from '../components/HomeHint';
 import DisclaimerWarn from '../components/DisclaimerWarn';
 import CopyrightFooter from '../components/CopyrightFooter';
+import LoginPopup from '../components/LoginPopup';
 
 import PageContext from '../contexts/PageContext';
 
@@ -51,7 +52,7 @@ function Home({ location }) {
 		setLoginParam(login == 1)
 	})
 
-	const [loginPopupShow, setLoginPopupShow] = useState(loginParam == 1)
+	const [loginPopupShow, setLoginPopupShow] = useState(loginParam)
 	const [redirect, setRedirect] = useState(false)
 
 	const handleAccessProfile = (e) => {
@@ -66,6 +67,7 @@ function Home({ location }) {
 		<PageContext.Provider value={pageContext}>
 			{/*TODO: Popup de login e sua mudança de estado*/}
 			<div id="home-page">
+				<LoginPopup state={[loginPopupShow, setLoginPopupShow]}/>
 				<Header handleGreenButtonBehavior={handleAccessProfile} />
 				<VacinaCounter />
 				<HomeHint handleAccessProfile={handleAccessProfile} />
