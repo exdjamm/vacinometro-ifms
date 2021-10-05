@@ -1,0 +1,9 @@
+.popup-warn{
+	text-align: center;
+	
+	font-weight: 400;
+	font-size: 16.8px;
+	color: var(--red);
+
+	padding: 12px 0;
+}

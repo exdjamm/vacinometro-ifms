@@ -1,8 +1,10 @@
 import "./index.css";
 
-function RenameThis(props) {
+function RenameThis({ warnText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}) {
 	return (
-		<></>
+		<span className="poppins-font popup-warn">
+			{warnText}			
+		</span>
 	);
 }
 
