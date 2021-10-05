@@ -16,7 +16,7 @@ function RenameThis({ button: Component, mainIcon = "shield-lock", warnText = ""
 
 				<div className="pp-content">
 					<div className="pp-text">
-						<PopupWarn warnText={warnText} hidden={showWarn} />
+						<PopupWarn warnText={warnText} hidden={!showWarn} />
 						<PopupHint hintText={hintText} />	
 					</div>
 					
