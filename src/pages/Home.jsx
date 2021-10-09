@@ -16,7 +16,7 @@ import './Home.css';
 
 const pageContext = {
 	iconsHeader:{
-		logged: "person-cicle",
+		logged: "person-circle",
 		notLogged: "box-arrow-in-right"
 	},
 	textHeader:{
