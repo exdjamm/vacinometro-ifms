@@ -12,12 +12,14 @@ import { doc, getDoc, setDoc} from 'firebase/firestore';
 import "./index.css";
 
 function Profile(props) {
+	const { auth, db } = useContext(FirebaseContext)
+	
 	// Expect user be login
 	const uid = auth.currentUser
 	const docUserVacinas = doc(db, `vacinados/${uid}`)
 
 	const [dosesStatus, setDosesStatus] = useState({dose_1:false, dose_2:false, dose_3:false, dose_unica:false})
-	const { auth, db } = useContext(FirebaseContext)
+	
 
 	useEffect( async () => {
 		const somaVacinasSnapshot = await getDoc(docUserVacinas)
