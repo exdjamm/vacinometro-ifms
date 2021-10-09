@@ -9,6 +9,9 @@ function LoginPopup({state: [state, setState]}) {
 	}
 
 	// TODO: Show Warn feature
+	// TODO: Mudar comportamento depende se usar botão "login" ou "cadastro"
+	// Ao usar botão login, não reseta as doses
+	// Ao usar botão cadastro, reseta as doses
 
 	return (
 		<article hidden={!state}>
