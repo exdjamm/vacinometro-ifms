@@ -26,8 +26,6 @@ function Profile(props) {
 		getDoc(docUserVacinas).then( (somaVacinasSnapshot) => {
 			setDosesStatus(somaVacinasSnapshot.data())	
 		})
-
-		console.log('1')
 		
 	}, [teste])
 	
