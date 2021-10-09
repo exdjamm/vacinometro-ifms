@@ -2,7 +2,7 @@ import { useState, useContext} from "react";
 
 import FirebaseContext from '../../../contexts/FirebaseContext'
 
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 import "./index.css";
@@ -13,7 +13,13 @@ const initUserDataOnDB = async (auth, db) => {
 	const { uid } = auth.currentUser
 
 	const docDosesUser = doc(db, `vacinados/${uid}`)
-	await setDoc(docDosesUser, { numero_doses: 1 })
+	const snapshotDocForTest = await getDoc(docDosesUser);
+
+	if(snapshotDocForTest.exists() != true){
+		return setDoc(docDosesUser, { dose_1: false, dose_2: false, dose_3: false, dose_unica: false })	
+	}
+
+	return null
 }
 
 function LoginAuthGoogle() {
