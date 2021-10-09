@@ -15,16 +15,22 @@ function Profile(props) {
 	const { auth, db } = useContext(FirebaseContext)
 	
 	// Expect user be login
-	const uid = auth.currentUser
+	const { uid } = auth.currentUser
 	const docUserVacinas = doc(db, `vacinados/${uid}`)
 
-	const [dosesStatus, setDosesStatus] = useState({dose_1:false, dose_2:false, dose_3:false, dose_unica:false})
+	const [teste, setTeste] = useState(false)
 	
+	const [dosesStatus, setDosesStatus] = useState(teste)
 
-	useEffect( async () => {
-		const somaVacinasSnapshot = await getDoc(docUserVacinas)
-		setDosesStatus(somaVacinasSnapshot.data())
-	})
+	useEffect( () => {
+		getDoc(docUserVacinas).then( (somaVacinasSnapshot) => {
+			setDosesStatus(somaVacinasSnapshot.data())	
+		})
+
+		console.log('1')
+		
+	}, [teste])
+	
 
 	const handleChangeDosesStatus = ({currentTarget}) => {
 		const name  = currentTarget.getAttribute('name');
