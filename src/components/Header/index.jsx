@@ -1,10 +1,13 @@
 import { useContext } from 'react';
 
+import PageContext from '../../contexts/PageContext';
+import FirebaseContext from '../../contexts/FirebaseContext';
+
 import HeaderTitle from './HeaderTitle'
 import HeaderButton from './HeaderButtons'
 
-import PageContext from '../../contexts/PageContext';
-import FirebaseContext from '../../contexts/FirebaseContext';
+import { signOut } from 'firebase/auth';
+
 
 import "./index.css";
 
@@ -20,7 +23,7 @@ function Header({handleGreenButtonBehavior}) {
 
 	const handleClickLoginBtn = (e) =>{
 		if(logged){
-			// TODO: Deslogar usuario; auth.logout()
+			signOut(auth)
 		}else{
 			// TODO: mostrar popup de login; setLoginPopupShow(true)
 		}
