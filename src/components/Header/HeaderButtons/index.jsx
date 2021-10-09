@@ -4,7 +4,7 @@ import FirebaseContext from '../../../contexts/FirebaseContext';
 
 import "./index.css";
 
-function HeaderButton({ color = 'green', text = 'Acessar Conta', className = '' }) {
+function HeaderButton({ color = 'green', text = 'Acessar Conta', className = '', ...rest }) {
 	const {iconsHeader} = useContext(PageContext)
 	const {user} = useContext(FirebaseContext)
 	const logged = user != undefined ;
@@ -25,7 +25,7 @@ function HeaderButton({ color = 'green', text = 'Acessar Conta', className = '' 
 	const style = (isColorWhite) ? styleWhite : styleGreen;
 
 	return (
-		<button className={`${className} header-btns`} style={style}>
+		<button className={`${className} header-btns`} style={style} { ...rest }>
 			<span className="header-btn-content ubuntu-font">{text}</span>
 			<i hidden={isColorWhite} className={`bi bi-${iconButton} btn-icon`}></i>
 		</button>
