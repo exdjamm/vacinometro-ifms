@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useContext} from 'react';
 import { Redirect } from "react-router-dom";
 
 import Header from '../components/Header';
@@ -9,6 +9,7 @@ import CopyrightFooter from '../components/CopyrightFooter';
 import LoginPopup from '../components/LoginPopup';
 
 import PageContext from '../contexts/PageContext';
+import FirebaseContext from '../contexts/FirebaseContext';
 
 import logo from '../logo.svg';
 import './Home.css';
@@ -49,14 +50,24 @@ function Home({ location }) {
 	const [loginParam, setLoginParam] = useState(false)
 	useEffect( () => {
 		const { login } = cleanSearchLocation(location)
-		setLoginParam(login == 1)
+		const test = (login == 1) && (login != undefined)
+		setLoginParam(test)
+
+		console.table({login, loginParam})
 	})
+
+	const { user } = useContext(FirebaseContext)
 
 	const [loginPopupShow, setLoginPopupShow] = useState(loginParam)
 	const [redirect, setRedirect] = useState(false)
 
 	const handleAccessProfile = (e) => {
-		// TODO: Funcionalidade quando clicado no botão de Verde no Header e no botão do Hin
+		if(user != undefined){
+			setRedirect(true)
+		}else{
+			setLoginPopupShow(true)
+			// TODO: hide popup on end login
+		}
 	}
 
 	if (redirect) {
@@ -65,7 +76,6 @@ function Home({ location }) {
 
 	return (
 		<PageContext.Provider value={pageContext}>
-			{/*TODO: Popup de login e sua mudança de estado*/}
 			<div id="home-page">
 				<LoginPopup state={[loginPopupShow, setLoginPopupShow]}/>
 				<Header handleGreenButtonBehavior={handleAccessProfile} />
