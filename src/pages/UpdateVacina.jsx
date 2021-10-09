@@ -32,7 +32,13 @@ function UpdateVacina() {
 		setRedirect(true)
 	}
 
-	if (redirect || notLogged) {
+	if (redirect) {
+		return <Redirect to={{
+				    pathname: "/"
+		  		}}/>
+	}
+
+	if (notLogged) {
 		return <Redirect to={{
 				    pathname: "/",
 				    search: "?login=1",
