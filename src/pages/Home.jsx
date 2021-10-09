@@ -52,8 +52,6 @@ function Home({ location }) {
 		const { login } = cleanSearchLocation(location)
 		const test = (login == 1) && (login != undefined)
 		setLoginParam(test)
-
-		console.table({login, loginParam})
 	})
 
 	const { user } = useContext(FirebaseContext)
