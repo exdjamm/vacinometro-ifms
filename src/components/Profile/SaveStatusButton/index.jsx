@@ -4,7 +4,7 @@ function SaveStatusButton(props) {
 	return (
 		<button { ... props} className="save-status-btn">
 			<span className="poppins-font">Salvar alterações</span>
-			<i class="bi bi-save-fill"/>
+			<i className="bi bi-save-fill"/>
 		</button>
 	);
 }
